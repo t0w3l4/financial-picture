@@ -13,8 +13,10 @@ https://www.kite.com/python/answers/how-to-read-a-text-file-into-a-list-in-pytho
 import matplotlib.pyplot as graph
 
 # Function that will plot the graph
+
+
 def plot_my_graph():
-    my_file = open("test_investing.txt", "r")
+    my_file = open("Text files/test_investing.txt", "r")
     content = my_file.read()
 
     # Return list of each date
@@ -33,20 +35,22 @@ def plot_my_graph():
 
     # Loop through each contribution to separate the different data points
     for contribution in content_list:
-        temp_list = contribution.split(',') # Create a list of elements by splitting the string at the comma ,
+        # Create a list of elements by splitting the string at the comma ,
+        temp_list = contribution.split(',')
         contr_dt.append(temp_list[0])
-        contr_amt.append(float(temp_list[1])) # Need to convert strings into floats before plotting
+        # Need to convert strings into floats before plotting
+        contr_amt.append(float(temp_list[1]))
         intr_amt.append(float(temp_list[2]))
 
     # Plot contributions
-    graph.plot(contr_dt, contr_amt, label = "Contributions")
+    graph.plot(contr_dt, contr_amt, label="Contributions")
 
     # Plot interest
-    graph.plot(contr_dt, intr_amt, label = "Interest")
+    graph.plot(contr_dt, intr_amt, label="Interest")
 
     # Labelling the graph
     graph.xlabel('Date')
-    graph.xticks(rotation = 90) # Make the x-axis labels vertical
+    graph.xticks(rotation=90)  # Make the x-axis labels vertical
     graph.ylabel('Dollars (CAD)')
 
     # Adding title to graph
@@ -60,5 +64,6 @@ def plot_my_graph():
 
     # Close the file once done with it
     my_file.close()
+
 
 plot_my_graph()
