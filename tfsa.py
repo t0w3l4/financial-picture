@@ -150,7 +150,7 @@ def add_contr(contribution):
     updated_file.close()
 
 
-add_contr(100.01)
+#add_contr(100.01)
 
 
 def withdraw(withdrawal_amount):
