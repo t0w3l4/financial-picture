@@ -1,4 +1,5 @@
-Total contribution room: $1000
-Remaining contribution room: $300
+Total contribution room: $1,000
+Remaining contribution room: $3,000
+Total contributions made: $50
 Current TFSA amount: $100
 Contribution room to be added on Jan 2022: $1,333.33
